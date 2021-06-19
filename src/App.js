@@ -142,6 +142,12 @@ export default function App() {
       setEmojiMeaning("Sorry we don't have this in our DB");
     }
   };
+
+  const emojiClickHandler = (emoji) => {
+    setUserInput(emoji);
+    setEmojiMeaning(emojiCollection[emoji]);
+  };
+
   // main rendrer
   return (
     <div className="App">
@@ -156,7 +162,9 @@ export default function App() {
       <p>{userInput}</p>
       <p>{emojiMeaning}</p>
       {Object.keys(emojiCollection).map((emoji) => (
-        <span key={emoji}>{emoji}</span>
+        <span onClick={() => emojiClickHandler(emoji)} key={emoji}>
+          {emoji}
+        </span>
       ))}
     </div>
   );
