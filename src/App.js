@@ -130,9 +130,17 @@ const emojiCollection = {
 export default function App() {
   // hooks
   const [userInput, setUserInput] = useState("");
+  const [emojiMeaning, setEmojiMeaning] = useState("");
   // functions
   const inputChangeHandler = (event) => {
     setUserInput(event.target.value);
+    if (event.target.value === "") {
+      setEmojiMeaning("");
+    } else if (event.target.value in emojiCollection) {
+      setEmojiMeaning(emojiCollection[event.target.value]);
+    } else {
+      setEmojiMeaning("Sorry we don't have this in our DB");
+    }
   };
   // main rendrer
   return (
@@ -146,6 +154,7 @@ export default function App() {
       </h1>
       <input onChange={inputChangeHandler} type="text" />
       <p>{userInput}</p>
+      <p>{emojiMeaning}</p>
     </div>
   );
 }
