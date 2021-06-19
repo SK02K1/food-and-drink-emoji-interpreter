@@ -159,13 +159,15 @@ export default function App() {
         Food & drink emoji interpreter
       </h1>
       <input onChange={inputChangeHandler} type="text" />
-      <p>{userInput}</p>
-      <p>{emojiMeaning}</p>
-      {Object.keys(emojiCollection).map((emoji) => (
-        <span onClick={() => emojiClickHandler(emoji)} key={emoji}>
-          {emoji}
-        </span>
-      ))}
+      <p className="user-input">{userInput}</p>
+      <p className="emoji-meaning">{emojiMeaning}</p>
+      <div className="emoji-container">
+        {Object.keys(emojiCollection).map((emoji) => (
+          <span onClick={() => emojiClickHandler(emoji)} key={emoji}>
+            {emoji}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
