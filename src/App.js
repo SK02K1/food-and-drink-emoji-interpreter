@@ -155,6 +155,9 @@ export default function App() {
       <input onChange={inputChangeHandler} type="text" />
       <p>{userInput}</p>
       <p>{emojiMeaning}</p>
+      {Object.keys(emojiCollection).map((emoji) => (
+        <span key={emoji}>{emoji}</span>
+      ))}
     </div>
   );
 }
