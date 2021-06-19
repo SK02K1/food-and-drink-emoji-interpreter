@@ -56,3 +56,13 @@ span {
     font-size: 1.5rem;
   }
 }
+
+@media screen and (min-width: 1152px) {
+  input {
+    width: 30%;
+  }
+  .emoji-container {
+    width: 50%;
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
