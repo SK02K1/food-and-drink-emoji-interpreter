@@ -62,7 +62,7 @@ span {
     width: 30%;
   }
   .emoji-container {
-    width: 50%;
+    width: 60%;
     grid-template-columns: repeat(10, 1fr);
   }
 }
