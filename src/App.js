@@ -158,7 +158,11 @@ export default function App() {
         </span>{" "}
         Food & drink emoji interpreter
       </h1>
-      <input onChange={inputChangeHandler} type="text" />
+      <input
+        onChange={inputChangeHandler}
+        type="text"
+        placeholder="Enter emoji here"
+      />
       <p className="user-input">{userInput}</p>
       <p className="emoji-meaning">{emojiMeaning}</p>
       <div className="emoji-container">

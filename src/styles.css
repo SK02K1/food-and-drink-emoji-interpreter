@@ -12,7 +12,7 @@ body {
 input {
   display: block;
   width: 80%;
-  margin: 0.5rem auto;
+  margin: 2rem auto;
   padding: 0.5rem;
   border-radius: 5px;
 }
@@ -37,4 +37,22 @@ span {
 .emoji-meaning {
   margin: 1rem 0rem;
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    margin-top: 2rem;
+  }
+  input {
+    width: 50%;
+  }
+
+  .emoji-container {
+    width: 70%;
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .user-input,
+  .emoji-meaning {
+    font-size: 1.5rem;
+  }
 }
