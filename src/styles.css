@@ -31,6 +31,12 @@ input {
 
 span {
   font-size: 2rem;
+  cursor: pointer;
+  transition: all 100ms ease;
+}
+
+span:hover {
+  transform: scale(1.2);
 }
 
 .user-input,
